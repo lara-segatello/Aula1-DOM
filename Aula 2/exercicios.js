@@ -7,3 +7,6 @@ titulo.addEventListener('mouseover', () => {
 titulo.addEventListener('mouseout', () => {
     titulo.textContent = "Passe o mouse aqui";
 });
+
+
+const input = document.querySelector
