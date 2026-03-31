@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório de DOM I - Aula Prática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Explorador de DOM I</h1>
+        <button id="btn-tema" onclick="alternarTema()">Ativar Modo Noturno</button>
+    </header>
+    <main class="container">
+        <!-- ESTAÇÃO 1: Árvore do DOM (Hora 1) -->
+        <section class="card" id="estacao-arvore">
+            <h2>1. Estrutura da Árvore</h2>
+            <div id="pai">
+                <p>Eu sou o primeiro filho.</p>
+                <p>Eu sou o irmão do meio.</p>
+                <span>Eu sou o último filho (span).</span>
+            </div>
+            <small>Abra o console e digite: <code>console.dir(document)</code></small>
+        </section>
+        <!-- ESTAÇÃO 2: Seleção (Hora 2) -->
+        <section class="card" id="estacao-selecao">
+            <h2>2. Central de Seleção</h2>
+            <p class="texto-simples">Parágrafo A (Classe: texto-simples)</p>
+            <p class="texto-simples">Parágrafo B (Classe: texto-simples)</p>
+            <p class="texto-simples">Parágrafo C (Classe: texto-simples)</p>
+            <div class="controles">
+                <button onclick="selecionarPorId()">Log ID</button>
+                <button onclick="selecionarPorClasse()">Log Classe (forEach)</button>
+            </div>
+        </section>
+        <!-- ESTAÇÃO 3: Conteúdo e Atributos (Hora 3) -->
+        <section class="card" id="estacao-conteudo">
+
+            <h2>3. Manipulador de Status</h2>
+            <div class="status-container">
+                <img id="status-img" src="https://cdn-icons-png.flaticon.com/512/564/564619.png" <p>Status: <strong
+                    id="status-texto">Aguardando...</strong></p>
+            </div>
+            <button onclick="atualizarStatus()">Finalizar Pedido (Mudar Atributos)</button>
+        </section>
+        <!-- ESTAÇÃO 4: Estilos e Elementos (Hora 4) -->
+        <section class="card" id="estacao-dinamica">
+            <h2>4. Lista Dinâmica</h2>
+            <ul id="lista-tarefas">
+                <!-- Itens entrarão aqui via JS -->
+            </ul>
+            <div class="input-group">
+                <input type="text" id="input-tarefa" placeholder="Nova tarefa...">
+                <button onclick="adicionarTarefa()">Adicionar</button>
+            </div>
+        </section>
+        <!-- DESAFIO FINAL: Personalizador -->
+        <section class="card desafio" id="perfil-card">
+            <h2>🚀 Desafio: Personalizador de Perfil</h2>
+            <div class="preview">
+                <h3 id="nome-perfil">Seu Nome Aqui</h3>
+                <div id="box-cor" class="box-colorida">Preview da Cor</div>
+            </div>
+            <div class="controles-desafio">
+                <input type="text" id="input-nome" placeholder="Digite seu nome">
+                <input type="color" id="input-cor" value="#6200ee">
+                <button onclick="aplicarPersonalizacao()">Aplicar Mudanças</button>
+            </div>
+            <div id="log-registro"></div>
+        </section>
+    </main>
+    <!-- Script da aula (pode ser separado em script.js) -->
+    <script src="script.js"></script>
+</body>
+
+</html>

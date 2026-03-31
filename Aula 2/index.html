@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastering DOM - Laboratório Avançado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Explorador de DOM 5.1</h1>
+        <button id="btn-theme-toggle">Alterar Modo Noturno</button>
+    </header>
+    
+    <main class="container">
+        <section class="card">
+            <h2>1.Árvore de Parentesco (Traverting)</h2>
+            <div class="container-pai" class="caixa-terrestre">
+                <p>Sou o filho 1 (Paragráfo)</p>
+                <span id="filhofoco">Sou a filha 2(Alvo do Foco)</span>
+                <p>Sou o filho 3 (Paragráfo)</p>
+            </div>
+            <button onclick="exemploParentesco()">Mapear Família no Console</button>
+        </section>
+        <section class="card" id="secao-selecao">
+            <h2>2. Seleção e Estilo (Classes vs Inline)</h2>
+            <div class="lista-itens">
+                <div class="item-teste">Item A</div>
+                <div class="item-teste">Item B</div>
+                <div class="item-teste">Item C</div>
+            </div>
+            <div class="controles">
+                 <button id="btn-estilo-massa">
+                    Destacar Todos (forEach)
+                 </button>
+                 <button id="btn-reset">Resetar</button>
+            </div>
+        </section>
+        <section class="card" id="secao-sistema">
+            <h2>3. Criação Dinâmica e Delegação</h2>
+            <div class="input-group">
+                <input type="text" id="input-log" placeholder="Digite uma mensagem...">
+                <button id="btn-add-log">Gerar Log</button>
+            </div>
+
+            <ul id="lista-logs">
+                <!-- Logs entrarão aqui via JS -->
+            </ul>
+        </section>
+
+
+
+        <!-- EXERCICIOS  -->
+
+        <section class="card" id="secao-sistema">
+            <h1 id="titulo">Secreto!!!</h1>
+        </section>
+
+        <section class="card" id="secao-sistema">
+            <div class="input-group">
+                <input type="text" id="input-alerta" placeholder="'Clique vazio...">
+            </div> 
+        </section>
+
+
+        <section class="card" id="secao-sistema">
+            
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="exercicios.js"></script>
+</body>
+</html>
